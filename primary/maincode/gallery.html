@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Shree Modern Academy</title>
+    <meta name="description" content="View photos from Shree Modern Academy">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="navbar.js" defer></script>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <section class="gallery-hero">
+        <div class="container">
+            <h1>School Gallery</h1>
+            <p>Capturing moments of learning, growth, and joy</p>
+        </div>
+    </section>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a> / <span>Gallery</span>
+        </div>
+    </div>
+
+    <section class="gallery-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="classroom">Classroom</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-grid-section">
+        <div class="container">
+            <div class="grid-container">
+                <!-- Initial 12 items -->
+                <div class="grid-item classroom" data-index="1">
+                    <img src="images/gallery/classroom-1.jpg" alt="Classroom activity">
+                    <div class="image-overlay">
+                        <h3>Classroom Learning</h3>
+                        <p>Students working together</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item events" data-index="2">
+                    <img src="images/gallery/event-1.jpg" alt="School event">
+                    <div class="image-overlay">
+                        <h3>Annual Day</h3>
+                        <p>Cultural performance</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item sports" data-index="3">
+                    <img src="images/gallery/sports-1.jpg" alt="Sports day">
+                    <div class="image-overlay">
+                        <h3>Sports Day</h3>
+                        <p>Annual competition</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item classroom" data-index="4">
+                    <img src="images/gallery/classroom-2.jpg" alt="Science class">
+                    <div class="image-overlay">
+                        <h3>Science Class</h3>
+                        <p>Hands-on experiment</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item events" data-index="5">
+                    <img src="images/gallery/event-2.jpg" alt="Parents day">
+                    <div class="image-overlay">
+                        <h3>Parents' Day</h3>
+                        <p>Meeting with teachers</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item sports" data-index="6">
+                    <img src="images/gallery/sports-2.jpg" alt="Football match">
+                    <div class="image-overlay">
+                        <h3>Football Match</h3>
+                        <p>Inter-house competition</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item classroom" data-index="7">
+                    <img src="images/gallery/classroom-3.jpg" alt="Math class">
+                    <div class="image-overlay">
+                        <h3>Mathematics</h3>
+                        <p>Interactive learning</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item events" data-index="8">
+                    <img src="images/gallery/event-3.jpg" alt="Teachers day">
+                    <div class="image-overlay">
+                        <h3>Teachers' Day</h3>
+                        <p>Students honoring teachers</p>
+                    </div>
+                </div>
+                
+                <!-- Hidden items that will be shown on Load More -->
+                <div class="grid-item sports hidden" data-index="9">
+                    <img src="images/gallery/sports-3.jpg" alt="Running race">
+                    <div class="image-overlay">
+                        <h3>Running Race</h3>
+                        <p>Annual sports event</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item classroom hidden" data-index="10">
+                    <img src="images/gallery/classroom-4.jpg" alt="Art class">
+                    <div class="image-overlay">
+                        <h3>Art Class</h3>
+                        <p>Creative expression</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item events hidden" data-index="11">
+                    <img src="images/gallery/event-4.jpg" alt="Prize distribution">
+                    <div class="image-overlay">
+                        <h3>Prize Day</h3>
+                        <p>Award ceremony</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item sports hidden" data-index="12">
+                    <img src="images/gallery/sports-4.jpg" alt="Basketball">
+                    <div class="image-overlay">
+                        <h3>Basketball</h3>
+                        <p>Team sports</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="load-more">
+                <button class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Load More
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal">
+        <div class="lightbox-content">
+            <span class="close-lightbox">&times;</span>
+            <img src="" alt="" class="lightbox-image">
+            <div class="image-caption">
+                <h3 aria-live="polite">Image Title</h3>
+                <p></p>
+            </div>
+            <div class="lightbox-nav">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="images/schoolLogo.png" alt="Shree Modern Academy Logo">
+                    <h3>Shree Modern Academy</h3>
+                </div>
+                <p>Providing quality education since 2010. Our mission is to nurture young minds and prepare them for future success.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> Bheri-ganga-9, Jahare, Surkhet</li>
+                    <li><i class="fas fa-envelope"></i> info@shreemodern.edu.np</li>
+                    <li><i class="fas fa-phone-alt"></i>+977-9866944780</li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>School Hours</h3>
+                <ul class="school-hours">
+                    <li>Sunday - Friday: 9:00 AM - 4:00 PM</li>
+                    <li>Saturday: Closed</li>
+                </ul>
+                <div class="newsletter">
+                    <h4>Subscribe to Newsletter</h4>
+                    <form>
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shree Modern Academy. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>
